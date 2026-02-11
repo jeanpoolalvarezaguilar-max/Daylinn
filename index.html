@@ -8,11 +8,11 @@
 <style>
 body{
     margin:0;
-    overflow:hidden;
     font-family:'Segoe UI',sans-serif;
     color:white;
     text-align:center;
     background:black;
+    overflow-y:auto; /* Permite scroll vertical */
 }
 
 /* 🌌 Fondo galaxia */
@@ -48,47 +48,13 @@ body{
 
 /* 💕 Contenido */
 .content{
-    position:relative;
+    position: relative; /* Ahora puede moverse con scroll */
     z-index:2;
     padding:25px;
     max-width:750px;
     margin:auto;
-}
-
-h1{
-    font-size:32px;
-    background:linear-gradient(45deg,#ff4da6,#ff99dd);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-#mensaje{
-    font-size:16px;
-    line-height:1.6;
-}
-
-/* 🎀 Botón */
-button{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(45deg,#ff4da6,#ff66cc);
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    box-shadow:0 0 20px pink;
-}
-
-/* 💗 Corazones */
-.heart{
-    position:fixed;
-    pointer-events:none;
-    animation:float 5s linear infinite;
-}
-@keyframes float{
-    from{transform:translateY(100vh); opacity:1;}
-    to{transform:translateY(-10vh); opacity:0;}
+    background: rgba(0,0,0,0.2); /* Fondo semitransparente opcional */
+    border-radius:15px;
 }
 
 /* 📸 Fotos */
@@ -113,6 +79,30 @@ button{
 
 @keyframes showName{
     to{opacity:1;}
+}
+
+/* 🎀 Botón */
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff4da6,#ff66cc);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 20px pink;
+}
+
+/* 💗 Corazones */
+.heart{
+    position:fixed;
+    pointer-events:none;
+    animation:float 5s linear infinite;
+}
+@keyframes float{
+    from{transform:translateY(100vh); opacity:1;}
+    to{transform:translateY(-10vh); opacity:0;}
 }
 </style>
 </head>
